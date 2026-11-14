@@ -50,7 +50,24 @@
                     break;
 
                 case 4:
-                    
+                    Console.Write("¿Qué producto deseas modificar? ");
+                    buscar = Console.ReadLine();
+
+                    int posicion = productos.IndexOf(buscar);
+
+                    if (posicion != -1)
+                    {
+                        Console.Write("Introduce el nuevo nombre: ");
+                        string nuevoNombre = Console.ReadLine();
+
+                        productos[posicion] = nuevoNombre;
+
+                        Console.WriteLine("Producto modificado correctamente.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Producto no encontrado.");
+                    }
                     break;
 
                 case 5:
