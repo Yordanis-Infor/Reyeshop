@@ -18,7 +18,7 @@
             Console.WriteLine("7: Ordenar la lista");
             Console.WriteLine("0: Salir");
 
-            Console.Write("Elige una opción: ");
+            Console.Write("Elige una opcion: ");
 
             if (!int.TryParse(Console.ReadLine(), out elecciones))
             {
@@ -101,6 +101,12 @@
 
     static void BuscarProducto(List<string> productos, List<double> precios)
     {
+        if (productos.Count == 0)
+        {
+            Console.WriteLine("No hay productos registrados.");
+            return;
+        }
+
         Console.Write("Que producto buscar: ");
         string buscar = Console.ReadLine();
 
