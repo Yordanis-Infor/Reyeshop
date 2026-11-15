@@ -8,7 +8,7 @@
 
         while (elecciones != 0)
         {
-            /* El menu se repite hasta que el usuario decida salir al menos que sea error de capa 8 y nunca salga*/
+            /*El menu se repite hasta que el usuario decida salir al menos que sea error de capa 8 y nunca salga*/
             Console.WriteLine("Inventario");
             Console.WriteLine("1: Agregar un producto");
             Console.WriteLine("2: Mostrar todos los productos");
@@ -59,7 +59,7 @@
                     break;
 
                 case 0:
-                    Console.WriteLine("Saliendo del menu...");
+                    Console.WriteLine("Saliendo del menu..");
                     break;
 
                 default:
@@ -155,7 +155,7 @@
         Console.Write("Que producto deseas eliminar? ");
         string borrar = Console.ReadLine();
 
-        int posicion = productos.IndexOf(borrar);
+        int posicion = productos.IndexOf(borrar); 
 
         if (posicion != -1)
         {
