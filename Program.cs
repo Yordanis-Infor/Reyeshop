@@ -8,6 +8,7 @@
 
         while (elecciones != 0)
         {
+            /* El menu se repite hasta que el usuario decida salir al menos que sea error de capa 8 y nunca salga*/
             Console.WriteLine("Inventario");
             Console.WriteLine("1: Agregar un producto");
             Console.WriteLine("2: Mostrar todos los productos");
@@ -84,6 +85,7 @@
         }
         else
             Console.WriteLine("Datos invaidos");
+        // Guardamos el producto junto con su precio para asi no complicanos la vida :)
     }
 
     static void MostrarProductos(List<string> productos, List<double> precios)
