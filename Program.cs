@@ -63,7 +63,7 @@
                     break;
 
                 default:
-                    Console.WriteLine("Opcion incorrecta");
+                    Console.WriteLine("Error de capa 8 esa opcion no esta en sistema...");
                     break;
             }
         }
@@ -105,7 +105,7 @@
     {
         if (productos.Count == 0)
         {
-            Console.WriteLine("No hay productos registrados.");
+            Console.WriteLine("No hay productos registrados");
             return;
         }
 
@@ -184,25 +184,7 @@
 
     static void OrdenarLista(List<string> productos, List<double> precios)
     {
-        for (int i = 0; i < productos.Count - 1; i++)
-        {
-            for (int j = i + 1; j < productos.Count; j++)
-            {
-                if (string.Compare(productos[i], productos[j],
-                    StringComparison.OrdinalIgnoreCase) > 0)
-                {
-                    string tempProducto = productos[i];
-                    productos[i] = productos[j];
-                    productos[j] = tempProducto;
-
-                    double tempPrecio = precios[i];
-                    precios[i] = precios[j];
-                    precios[j] = tempPrecio;
-                }
-            }
-        }
-
-        Console.WriteLine("Inventario ordenado");
-        MostrarProductos(productos, precios);
+        foreach (int i in Enumerable.Range(0, productos.Count).OrderBy(i => productos[i]))
+            Console.WriteLine($"{productos[i]} - RD${precios[i]}");
     }
 }
